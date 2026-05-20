@@ -1,17 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { name: "Services", href: "#features" },
   { name: "Process", href: "#how-it-works" },
-  { name: "Portfolio", href: "#developers" },
-  { name: "Technologies", href: "#infrastructure" },
-  { name: "Testimonials", href: "#" },
-  { name: "Pricing", href: "#pricing" },
-  { name: "Contact", href: "#" },
+  { name: "Works", href: "#portfolio" },
+  { name: "Testimonials", href: "#testimonials" },
+  { name: "Contact", href: "mailto:info@digvian.com" },
 ];
 
 export function Navigation() {
@@ -47,7 +46,15 @@ export function Navigation() {
           }`}
         >
           {/* Logo */}
+           
           <a href="#" className="flex items-center gap-2 group">
+            <Image
+              src="/digvian-logo.png"
+              alt="Digvian"
+              width={isScrolled ? 32 : 40}
+              height={isScrolled ? 32 : 40}
+              className={`transition-all duration-500`}
+            />
             <span className={`font-display tracking-tight transition-all duration-500 ${isScrolled ? "text-xl" : "text-2xl"}`}>Digvian</span>
             {/* <span className={`text-muted-foreground font-mono transition-all duration-500 ${isScrolled ? "text-[10px] mt-0.5" : "text-xs mt-1"}`}>AI</span> */}
           </a>
@@ -71,12 +78,14 @@ export function Navigation() {
             {/* <a href="#" className={`text-foreground/70 hover:text-foreground transition-all duration-500 ${isScrolled ? "text-xs" : "text-sm"}`}>
               Sign in
             </a> */}
-            <Button
-              size="sm"
-              className={`bg-foreground hover:bg-foreground/90 text-background rounded-full transition-all duration-500 ${isScrolled ? "px-4 h-8 text-xs" : "px-6"}`}
-            >
-              Book a Free Call
-            </Button>
+            <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer">
+              <Button
+                size="sm"
+                className={`bg-foreground hover:bg-foreground/90 text-background rounded-full transition-all duration-500 ${isScrolled ? "px-4 h-8 text-xs" : "px-6"}`}
+              >
+                Book a Free Call
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -97,13 +106,21 @@ export function Navigation() {
       
       {/* Mobile Menu - Full Screen Overlay */}
       <div
-        className={`md:hidden fixed inset-0 bg-background z-40 transition-all duration-500 ${
-          isMobileMenuOpen 
-            ? "opacity-100 pointer-events-auto" 
+        className={`md:hidden fixed inset-0 bg-background z-50 transition-all duration-500 ${
+          isMobileMenuOpen
+            ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
         }`}
         style={{ top: 0 }}
       >
+        {/* Close Button */}
+        <button
+          onClick={() => setIsMobileMenuOpen(false)}
+          className="absolute top-6 right-6 p-2 rounded-full bg-foreground/10 hover:bg-foreground/20 transition"
+          aria-label="Close menu"
+        >
+          <X className="w-7 h-7 text-foreground" />
+        </button>
         <div className="flex flex-col h-full px-8 pt-28 pb-8">
           {/* Navigation Links */}
           <div className="flex-1 flex flex-col justify-center gap-8">
@@ -132,19 +149,20 @@ export function Navigation() {
           }`}
           style={{ transitionDelay: isMobileMenuOpen ? "300ms" : "0ms" }}
           >
-            {/* <Button 
+            <Button 
               variant="outline" 
               className="flex-1 rounded-full h-14 text-base"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Sign in
-            </Button> */}
-            <Button 
-              className="flex-1 bg-foreground text-background rounded-full h-14 text-base"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Start Your Project
+              <a href="mailto:info@digvian.com" className="w-full">Contact</a>
             </Button>
+            <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" className="flex-1">
+              <Button 
+                className="w-full bg-foreground text-background rounded-full h-14 text-base"
+              >
+                Book a Free Call
+              </Button>
+            </a>
           </div>
         </div>
       </div>

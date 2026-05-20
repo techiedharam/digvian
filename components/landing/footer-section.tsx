@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { AnimatedWave } from "./animated-wave";
 
@@ -9,20 +10,15 @@ const footerLinks = {
     { name: "SaaS Development", href: "#features" },
     { name: "AI Solutions", href: "#features" },
   ],
-  Portfolio: [
-    { name: "Selected work", href: "#developers" },
+  Works: [
+    { name: "Selected work", href: "#portfolio" },
     { name: "Case studies", href: "#testimonials" },
-    { name: "Testimonials", href: "#" },
-  ],
-  Technologies: [
-    { name: "Tech stack", href: "#infrastructure" },
-    { name: "Integrations", href: "#integrations" },
-    { name: "Partners", href: "#" },
+    { name: "Testimonials", href: "#testimonials" },
   ],
   Company: [
-    { name: "About", href: "#" },
+    { name: "About", href: "#about" },
     { name: "Careers", href: "#", badge: "Hiring" },
-    { name: "Contact", href: "#" },
+    { name: "Contact", href: "mailto:info@digvian.com" },
   ],
 };
 
@@ -48,13 +44,25 @@ export function FooterSection() {
             {/* Brand Column */}
             <div className="col-span-2">
               <a href="#" className="inline-flex items-center gap-2 mb-6">
-                <span className="text-2xl font-display">Digvian</span>
-                <span className="text-xs text-muted-foreground font-mono">AI</span>
+                <Image
+                  src="/digvian-logo.png"
+                  alt="Digvian"
+                  width={40}
+                  height={40}
+                />
+                <span className="font-display tracking-tight transition-all duration-500 font-2xl" >Digvian</span>
               </a>
 
               <p className="text-muted-foreground leading-relaxed mb-8 max-w-xs">
                 Digvian is an AI-powered digital agency — websites, SaaS, AI integrations and growth teams for startups and brands.
               </p>
+
+              {/* Contact Email */}
+              <div className="mb-6">
+                <a href="mailto:info@digvian.com" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  info@digvian.com
+                </a>
+              </div>
 
               {/* Social Links */}
               <div className="flex gap-6">

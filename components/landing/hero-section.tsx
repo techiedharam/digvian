@@ -90,10 +90,7 @@ export function HeroSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
           }`}
         >
-          <span className="inline-flex items-center gap-2.5 border border-black/[0.1] bg-white/70 rounded-full px-4 py-1.5 text-[11px] font-mono tracking-[0.6px] text-black/50 uppercase backdrop-blur-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-pulse" />
-            AI-powered agency — startups &amp; growth teams
-          </span>
+           
         </div>
 
         {/* Headline */}
@@ -170,13 +167,19 @@ export function HeroSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          <Button
+
+
+          <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" className="flex-1">
+              <Button
             size="lg"
             className="bg-black hover:bg-black/82 text-white px-7 h-11 text-[13.5px] font-medium rounded-full shadow-none group"
           >
             Book a Free Call
             <ArrowRight className="w-3.5 h-3.5 ml-2 transition-transform group-hover:translate-x-1" />
           </Button>
+            </a>
+
+          
           <Button
             size="lg"
             variant="outline"

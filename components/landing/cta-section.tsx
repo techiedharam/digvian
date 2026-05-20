@@ -62,20 +62,24 @@ export function CtaSection() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-start gap-4">
-                  <Button
-                    size="lg"
-                    className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
-                  >
-                    Book a Free Call
-                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
-                  >
-                    Start Your Project
-                  </Button>
+                  <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer">
+                    <Button
+                      size="lg"
+                      className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
+                    >
+                      Book a Free Call
+                      <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                    </Button>
+                  </a>
+                  <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer">
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
+                    >
+                      Start Your Project
+                    </Button>
+                  </a>
                 </div>
 
                 <p className="text-sm text-muted-foreground mt-8 font-mono">
