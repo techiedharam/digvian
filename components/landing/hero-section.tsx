@@ -169,7 +169,7 @@ export function HeroSection() {
         >
 
 
-          <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" className="flex-1">
+          <a href="/contact" className="flex-1">
               <Button
             size="lg"
             className="bg-black hover:bg-black/82 text-white px-7 h-11 text-[13.5px] font-medium rounded-full shadow-none group"
@@ -180,6 +180,7 @@ export function HeroSection() {
             </a>
 
           
+          <a href="/contact">
           <Button
             size="lg"
             variant="outline"
@@ -188,6 +189,7 @@ export function HeroSection() {
           >
             Start Your Project
           </Button>
+          </a>
         </div>
 
         {/* Trusted by */}

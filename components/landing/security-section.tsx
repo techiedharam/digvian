@@ -327,7 +327,7 @@ export function SecuritySection() {
             />
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-3 leading-tight font-sans">
+          <h2 className="text-4xl md:text-5xl  tracking-tight text-white mb-3 leading-tight font-sans">
             Why Choose Digvian?
           </h2>
           <p className="text-[15px] text-white/50 max-w-xl leading-relaxed font-sans">
@@ -350,6 +350,8 @@ export function SecuritySection() {
           </div>
         </motion.div>
       </div>
+
+
 
       {/*
        * Snake Grid Layout
