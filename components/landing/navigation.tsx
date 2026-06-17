@@ -10,7 +10,7 @@ const navLinks = [
   { name: "Process", href: "#how-it-works" },
   { name: "Works", href: "#portfolio" },
   { name: "Testimonials", href: "#testimonials" },
-  { name: "Contact", href: "mailto:info@digvian.com" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export function Navigation() {
@@ -78,7 +78,7 @@ export function Navigation() {
             {/* <a href="#" className={`text-foreground/70 hover:text-foreground transition-all duration-500 ${isScrolled ? "text-xs" : "text-sm"}`}>
               Sign in
             </a> */}
-            <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer">
+            <a href="/contact">
               <Button
                 size="sm"
                 className={`bg-foreground hover:bg-foreground/90 text-background rounded-full transition-all duration-500 ${isScrolled ? "px-4 h-8 text-xs" : "px-6"}`}
@@ -154,11 +154,12 @@ export function Navigation() {
               className="flex-1 rounded-full h-14 text-base"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <a href="mailto:info@digvian.com" className="w-full">Contact</a>
+              <a href="/contact" className="w-full">Contact</a>
             </Button>
-            <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" className="flex-1">
+            <a href="/contact" className="flex-1">
               <Button 
                 className="w-full bg-foreground text-background rounded-full h-14 text-base"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Book a Free Call
               </Button>
